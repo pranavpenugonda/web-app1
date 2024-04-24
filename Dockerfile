@@ -5,9 +5,7 @@ FROM nginx:alpine
 WORKDIR /usr/share/nginx/html
 
 # Copy the HTML, CSS, and JS files into the container
-COPY todo_item_dynamically.html .
-COPY todo_item_dynamically.css .
-COPY todo_item_dynamically.js .
+COPY . .
 
 # Expose port 80 to allow communication to/from the container
 EXPOSE 8000
