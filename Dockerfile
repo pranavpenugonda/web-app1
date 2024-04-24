@@ -10,7 +10,7 @@ COPY todo_item_dynamically.css .
 COPY todo_item_dynamically.js .
 
 # Expose port 80 to allow communication to/from the container
-EXPOSE 80000
+EXPOSE 8000
 
 # Command to start the nginx server
 CMD ["nginx", "-g", "daemon off;"]
