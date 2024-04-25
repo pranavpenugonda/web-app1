@@ -1,13 +1,6 @@
-# Use a lightweight web server image as the base image
-FROM nginx:alpine
-
-# Set the working directory inside the container
-WORKDIR /usr/share/nginx/html
-
-# Copy the HTML, CSS, and JS files into the container
+FROM node:18-alpine
+WORKDIR /app
 COPY . .
-
-EXPOSE 80
-
-# Command to start the nginx server
-CMD ["nginx", "-g", "daemon off;"]
+RUN yarn install --production
+CMD ["node", "todo_item_dynamically.html"]
+EXPOSE 8000
