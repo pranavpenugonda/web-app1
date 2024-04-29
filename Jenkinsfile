@@ -4,7 +4,7 @@ pipeline {
         stage('Clone the repo') {
             steps {
                 echo 'clone the repo'
-                sh 'rm -fr webapp1'
+                sh 'rm -fr web-app1'
                 sh 'git clone https://github.com/pranavpenugonda/web-app1.git'
             }
         }
