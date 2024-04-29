@@ -11,7 +11,7 @@ pipeline {
         stage('push repo to remote host') {
             steps {
                 echo 'connect to remote host and pull down the latest version'
-                sh 'ssh -i jenkins-todoapp.pem ubuntu@13.201.28.164 sudo git -C /var/www/html pull'
+                sh 'ssh -i "jenkins-todoapp.pem" ubuntu@ec2-13-201-28-164.ap-south-1.compute.amazonaws.com sudo git -C /var/www/html pull'
             }
         }
         stage('Check website is up') {
